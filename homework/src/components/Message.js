@@ -1,9 +1,9 @@
-function MyHeader({name}) {
+import styles from './Message.module.css'
+
+export function Message(props) {
   return(
     <div>
-      <h1>Привет, {name}</h1>
+      <h1 className={styles.Message}>{props.title}</h1>
     </div>
   )
 }
-
-export default MyHeader;

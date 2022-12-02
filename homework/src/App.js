@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css';
-import MyHeader from './components/Message';
+import { Message } from './components/Message'
 
 
-export function App(props) {
+
+export function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <MyHeader name={"Ivan"}/>
-      </header>
+    <div>
+      <Message title='Привет!!!' />
     </div>
-  );
+  )
 }
+
+// export default App;
