@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react'
+import {Form} from './components/Form'
+import { Message } from './components/Message';
 
 function App() {
+
+  const [messageList, setMessageList] = useState([])
+  const [messageBody, setMessageBody] = useState({
+    text: '',
+    author: '',
+  })
+
+  const ROBOT_MESSAGE = 'Сообщение получено'
+
+  useEffect(() => {
+    if(messageList.length > 0 && messageList.slice(-1)[0].author !== 'robot') {
+      setTimeout(()=>{
+        setMessageList(pervstate => [...pervstate, {text:ROBOT_MESSAGE, author: 'robot'}])
+      }, 1000)
+    }
+  },[messageList])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form data={messageBody} setData={setMessageBody} setMessage={setMessageList}></Form>
+      <div className='messageList'>
+        {
+          messageList.map((e,i)=><Message text={e.text} author={e.author} key={i}></Message>)
+        }
+      </div> 
     </div>
   );
 }
