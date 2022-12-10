@@ -23,7 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <Form data={messageBody} setData={setMessageBody} setMessage={setMessageList}></Form>
+      <div className="reverse">
+        <Form data={messageBody} setData={setMessageBody} setMessage={setMessageList}></Form>
+      </div>
       <div className='messageList'>
         {
           messageList.map((e,i)=><Message text={e.text} author={e.author} key={i}></Message>)
