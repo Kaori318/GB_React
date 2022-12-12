@@ -1,6 +1,7 @@
 import React from "react";
 import '../App.css'
 
+
 export const Form = ({data, setData, setMessage}) => {
   const {text, author} = data
 
