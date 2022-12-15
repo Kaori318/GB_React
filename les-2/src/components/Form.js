@@ -1,5 +1,7 @@
 import React from "react";
 import '../App.css'
+import IButton from '@mui/material/Button';
+
 
 
 export const Form = ({data, setData, setMessage}) => {
@@ -23,6 +25,6 @@ export const Form = ({data, setData, setMessage}) => {
 " placeholder='Имя' value={author} onChange = {(e)=> setData(prevstate => ({...prevstate,author: e.target.value}))}/>
       <input className="form-input {
 " placeholder='Текст' value={text} onChange = {(e)=> setData(prevstate => ({...prevstate,text: e.target.value}))}/>
-      <button className="form-btn" type="submit">Отправить</button>
+  <IButton type="submit" variant="contained">Отправить</IButton>
     </form>)
 }
