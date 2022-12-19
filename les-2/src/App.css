@@ -54,3 +54,7 @@
   text-align: center;
   color: #005bff;
 }
+
+.container {
+  display: flex;
+}
