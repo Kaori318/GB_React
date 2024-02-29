@@ -1,0 +1,56 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  height: 300px;
+  border: 1px solid #B3BCC5;
+  flex-direction: column;
+  width: 300px;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.form-input {
+  margin: 15px 0;
+  padding: 10px 20px;
+  border: 2px solid #B3BCC5;
+  border-radius: 5px;
+}
+
+.form-input:hover {
+  border: 2px solid #005BFF;
+}
+.form-input:focus {
+  border: 2px solid #005BFF;
+}
+
+.form-btn {
+  align-items: center;
+  background-color: #005bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  border: none;
+  font-size: 16px;
+}
+
+.messageList {
+  width: 700px;
+  margin: 15px;
+}
+
+.messageList-list {
+  border: 1px solid #B3BCC5;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.messageList-list h3{
+  text-align: center;
+  color: #005bff;
+}
